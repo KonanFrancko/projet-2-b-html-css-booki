@@ -136,6 +136,33 @@ a {
    6. SECTIONS / PAGE-SPECIFIC STYLES
    ========================================================== */
 
+.nav-container nav {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  height: 79px;
+  padding: 20px 40px;
+}
+
+.nav-container nav a.nav-logo img {
+  width: 50%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+.nav-container nav ul {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 170px;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  color: var(--main-color);
+}
 .hebergements-and-populaires {
   display: flex;
   justify-content: space-between;
