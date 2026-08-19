@@ -16,13 +16,22 @@
 
 <body>
     <div class="main-container">
+        <!-- Skip link -->
+        <a class="skip-link" href="#contenu-principal">
+            Aller au contenu principal
+        </a>
+        <!--
+        -------
+        -------
+        -->
+
+        <!--Header-->
         <header>
             <div class="nav-container">
-                <nav>
-                    <a class="nav-logo" href="#">
+                <nav aria-label="Menu principal">
+                    <a class="nav-logo" href="#" aria-label="Accueil — Booki">
                         <img src="./images/logo/Booki.png"
-                            srcset="./images/logo/Booki.png 1x,./images/logo/Booki@3x.png 3x" alt="Logo de Booki"
-                            title="Logo de Booki">
+                            srcset="./images/logo/Booki.png 1x,./images/logo/Booki@3x.png 3x" alt="Accueil — Booki">
                     </a>
                     <ul>
                         <li><a href="#">Hébergements</a></li>
@@ -31,7 +40,46 @@
                 </nav>
             </div>
         </header>
-        <main>
+        <!--
+        -------
+        -------
+        -->
+
+        <!-- Contenu principal -->
+        <main id="contenu-principal" tabindex="-1">
+
+            <div class="top-content">
+                <!-- search bar and filters -->
+                <section class="main-title">
+                    <h1>Trouvez votre hébergement pour des vacances de rêve</h1>
+                    <p class="sub-title">En plein centre-ville ou en pleine nature</p>
+                </section>
+
+                <!-- search bar and filters -->
+                <section class="search-bar-filters">
+                    <div class="searchbar-container">
+                        <div class="gps-picto"><i class="fa-solid fa-location-dot"></i></div>
+                        <form class="search-form" action="action_page.php" onsubmit="event.preventDefault()">
+                            <input type="text" placeholder="Marseille, France" name="Rechercher"
+                                aria-label="Rechercher un hébergement">
+                            <button title="Rechercher" type="submit">Rechercher</button>
+                        </form>
+                    </div>
+                    <div class="filters-container">
+                        <p class="filter-text-content">Filtres</p>
+                        <a href="#" class="filters"><i class="fa-solid fa-money-bill-1-wave"></i>Économique</a>
+                        <a href="#" class="filters"><i class="fa-solid fa-person"></i>Familial</a>
+                        <a href="#" class="filters"><i class="fa-solid fa-heart"></i>Romantique</a>
+                        <a href="#" class="filters"><i class="fa-solid fa-fire"></i>Nos pépites</a>
+                    </div>
+                    <p class="info-container">
+                        <span class="info"><i class="fa-solid fa-info"></i></span><span>Plus de 500 logements sont
+                            disponibles
+                            dans cette ville</span>
+                    </p>
+                </section>
+            </div>
+
             <div class="hebergements-and-populaires">
                 <section class="hebergements">
 
@@ -106,7 +154,17 @@
                 </section>
             </div>
         </main>
+        <!--
+        -------
+        -------
+        -->
+
+        <!-- footer-->
         <footer></footer>
+        <!--
+        -------
+        -------
+        -->
     </div>
 </body>
 

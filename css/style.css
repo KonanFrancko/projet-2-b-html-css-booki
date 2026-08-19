@@ -6,6 +6,7 @@
   --main-color: #0065fc;
   --main-bg-color: #f2f2f2;
   --filter-bg-color: #deebff;
+  --text-color: #1a1a1a;
 }
 
 /* ==========================================================
@@ -59,6 +60,21 @@ a {
 /* ==========================================================
    5. COMPONENTS
    ========================================================== */
+
+.skip-link {
+  position: absolute;
+  left: -9999px;
+}
+
+.skip-link:focus {
+  left: 1rem;
+  top: 1rem;
+  z-index: 1000;
+  padding: 0.75rem 1rem;
+  background: white;
+  color: var(--text-color);
+  outline: 3px solid var(--main-color);
+}
 
 .fa-solid {
   color: var(--main-color);
@@ -136,33 +152,180 @@ a {
    6. SECTIONS / PAGE-SPECIFIC STYLES
    ========================================================== */
 
+/*HEADER*/
+
 .nav-container nav {
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
   height: 79px;
-  padding: 20px 40px;
+  padding: 20px 0;
 }
 
 .nav-container nav a.nav-logo img {
   width: 50%;
   height: auto;
   display: block;
-  margin: 0 auto;
 }
 
 .nav-container nav ul {
   display: flex;
-  flex-direction: row;
   align-items: center;
-  justify-content: space-between;
-  gap: 170px;
-  list-style-type: none;
+  gap: 68px;
+  list-style: none;
   margin: 0;
   padding: 0;
+}
+.nav-container nav ul li a {
+  display: flex;
+  align-items: center;
+  height: 35px;
+  box-sizing: border-box;
+  border-top: 2px solid transparent;
+  transition: border-color 0.2s ease;
   color: var(--main-color);
 }
+.nav-container nav ul li a:hover {
+  border-top: 2px solid var(--main-color);
+}
+
+.nav-container nav ul a:hover,
+.nav-container nav ul a:focus-visible {
+  border-top-color: var(--main-color);
+}
+
+.nav-container nav ul a:focus-visible,
+.nav-logo:focus-visible {
+  outline: 3px solid #1a1a1a;
+  outline-offset: 4px;
+}
+/*********/
+/*********/
+
+/*Top content*/
+section.main-title h1 {
+  font-size: 26px;
+  margin: 0;
+  line-height: 1;
+  font-weight: 700;
+}
+
+section.main-title p.sub-title {
+  font-size: 16px;
+  margin-top: 10px;
+  margin-bottom: 0;
+  line-height: 1.5;
+}
+
+div.searchbar-container {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 377px;
+  height: 49px;
+  flex-direction: row;
+  margin: 35px 0;
+}
+
+div.searchbar-container .gps-picto {
+  background-color: #f2f2f2;
+  width: 50px;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  border: 1px solid #f2f2f2;
+  border-right: none;
+  border-radius: 15px 0 0 15px;
+}
+div.searchbar-container .gps-picto i.fa-solid.fa-location-dot {
+  color: #000;
+}
+
+div.searchbar-container .search-form {
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+
+div.searchbar-container .search-form input {
+  flex: 1;
+  min-width: 0;
+  height: 100%;
+  box-sizing: border-box;
+  border: 1px solid #f2f2f2;
+  border-right: none;
+  border-left: none;
+}
+div.searchbar-container .search-form input::placeholder {
+  color: var(--text-color);
+  font-weight: 700;
+  opacity: 1;
+  font-size: 18px;
+  text-align: center;
+}
+
+div.searchbar-container .search-form button {
+  width: 132px;
+  height: 100%;
+  box-sizing: border-box;
+  background-color: var(--main-color);
+  color: #fff;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: 700;
+  border: 1px solid var(--main-color);
+  border-radius: 0 15px 15px 0;
+}
+
+div.filters-container {
+  display: flex;
+  flex-direction: row;
+  gap: 15px;
+  align-items: center;
+  margin-bottom: 35px;
+}
+div.filters-container p.filter-text-content {
+  color: var(--text-color);
+  font-size: 18px;
+  font-weight: 700;
+}
+div.filters-container a.filters {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border: 2px solid #d9d9d9;
+  font-size: 17px;
+  font-weight: 700;
+  padding: 15px 19px;
+  transition: background-color 0.2s ease;
+  border-radius: 25px;
+}
+
+div.filters-container a.filters:hover {
+  background-color: #deebff;
+}
+p.info-container {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 10px;
+}
+p.info-container span.info {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  border: 1px solid #d9d9d9;
+  border-radius: 50%;
+  padding: 2px;
+}
+/*********/
+/*********/
+
 .hebergements-and-populaires {
   display: flex;
   justify-content: space-between;
